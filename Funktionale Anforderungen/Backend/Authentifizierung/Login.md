@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Die Authentifizierung im Hochschulsystem muss funktionieren.
+Die Authentifizierung im Single Sign On System der Hochschule muss funktionieren.
 
 ## Anmerkungen
 
