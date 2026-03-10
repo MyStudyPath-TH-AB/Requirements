@@ -8,3 +8,4 @@ Fächer innerhalb des Studienplans sollen sichtbar voneinander unterschieden wer
 
 - Abgrenzungen anhand Fakultäten, Studiengängen oder Wahl/Pflicht.
 - Semester müssen klar voneinander abgegrenzt sein.
+- Fächer sollen klickbar sein, um weitere Informationen zu erhalten (siehe [Fachübersicht](./../Fachübersicht/Fachübersicht.md)).

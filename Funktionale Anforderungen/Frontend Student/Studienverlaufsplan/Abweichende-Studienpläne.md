@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Abweichende Studienpläne müssen angezeigt werden können.
+Abweichende Studienpläne sollen angezeigt werden können.
 
 ## Anmerkungen
 
