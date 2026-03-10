@@ -8,3 +8,4 @@ Es muss eine Übersicht der Studenten angezeigt werden können.
 
 - Wenn man auf einen Studenten klickt, soll die Detailansicht des Studenten angezeigt werden.
 - Die Studentenliste soll farblich sortiert sein.
+- Nach dem login soll man hier landen.

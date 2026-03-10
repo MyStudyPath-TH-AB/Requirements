@@ -8,3 +8,4 @@ Es muss eine Detailansicht eines bestimmten Studenten angezeigt werden können.
 
 - Die Detailansicht soll alle relevanten Informationen über den Studenten enthalten.
 - Es soll möglich sein, Kommentare zu dem Studenten hinzuzufügen.
+- Es soll einen Zurück Button geben, um zur Übersicht zurückzukehren.
