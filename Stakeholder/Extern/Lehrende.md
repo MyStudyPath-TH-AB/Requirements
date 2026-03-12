@@ -4,4 +4,4 @@ Lehrende (Professoren) der TH AB
 
 ## Anmerkungen
 
-Durchführung Evaluation(?)
+- Zielgruppe für Evaluationen(?)

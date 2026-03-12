@@ -4,4 +4,5 @@ Beratende der TH AB
 
 ## Anmerkungen
 
-Studienfachberatende, Dekane
+- Studienfachberatende, Dekane
+- Zielgruppe für Evaluationen

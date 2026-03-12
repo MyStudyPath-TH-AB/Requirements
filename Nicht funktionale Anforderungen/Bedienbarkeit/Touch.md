@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Das SRM Tool muss mittels Touch bedienbar sein.
+Beide Frontends müssen mittels Touch bedienbar sein.
 
 ## Anmerkungen
 

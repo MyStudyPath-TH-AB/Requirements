@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Das SRM Tool muss mit Maus und Tastatur bedienbar sein.
+Beide Frontends müssen mit Maus und Tastatur bedienbar sein.
 
 ## Anmerkungen
 
