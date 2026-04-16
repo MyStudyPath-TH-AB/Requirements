@@ -2,8 +2,17 @@
 
 Datenschutz Verordnungen und Regeln
 
+## Ziele
+
+- Datenschutzgerechtes System sicherstellen
+- Nutzende informiert wissen
+
 ## Anmerkungen
 
-Ansprechpartner Armin Glaab (Helpdesk)
+- Muss weiter ermittelt werden
 
-Projektleiterin Christiane Seidel
+## Ansprechpartner
+
+Glaab
+Seidel
+Rechtliche Abteilung der TH AB (Justiziariat)
