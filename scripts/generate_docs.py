@@ -250,23 +250,18 @@ def generate_stakeholders_html(stakeholders):
             <h1>Stakeholders</h1>
     """
     
-    for category, subcategories in stakeholders.items():
+    for category, items in stakeholders.items():
         html += f'<div class="stakeholder-category"><h2>{category.replace("_", " ").title()}</h2>'
-        
-        for subcategory, items in subcategories.items():
-            html += f'<h3>{subcategory.replace("_", " ").title()}</h3>'
-            
-            for item in items:
-                html += f"""
-                <div class="stakeholder-item">
-                    <h4>{item['file'].replace('.md', '')}</h4>
-                    <div class="stakeholder-content">
-                        {item['content']}
-                    </div>
+    
+        for item in items:
+            html += f"""
+            <div class="stakeholder-item">
+                <h4>{item['file'].replace('.md', '')}</h4>
+                <div class="stakeholder-content">
+                    {item['content']}
                 </div>
-                """
-        
-        html += '</div>'
+            </div>
+            """
     
     html += """
         </div>
