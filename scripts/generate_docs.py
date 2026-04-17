@@ -100,7 +100,7 @@ def generate_func_requirements_html(func_requirements):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Requirements</title>
+        <title>Funktionale Anforderungen</title>
         <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
@@ -149,7 +149,7 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Requirements</title>
+        <title>Nicht funktionale Anforderungen</title>
         <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
@@ -249,15 +249,18 @@ def main():
     nonfunc_requirements = parse_nonfunc_requirements()
     stakeholders = parse_stakeholders()
     
-    req_html = generate_func_requirements_html(func_requirements)
-    nonfunc_html = generate_nonfunc_requirements_html(nonfunc_requirements)
+    funcreq_html = generate_func_requirements_html(func_requirements)
+    nonfuncreq_html = generate_nonfunc_requirements_html(nonfunc_requirements)
     sh_html = generate_stakeholders_html(stakeholders)
     
     # Write files
-    with open('docs/requirements.html', 'w', encoding='utf-8') as f:
-        f.write(req_html)
+    with open('docs/functional_requirements.html', 'w', encoding='utf-8') as f:
+        f.write(funcreq_html)
+
+    with open('docs/nonfunctional_requirements.html', 'w', encoding='utf-8') as f:
+        f.write(nonfuncreq_html)
     
-    with open('docs/stakeholders.html', 'w', encoding='utf-8') as f:
+    with open('docs/stakeholder.html', 'w', encoding='utf-8') as f:
         f.write(sh_html)
     
     # Create index page
@@ -282,8 +285,9 @@ def main():
         <div class="container">
             <h1>📚 Project Documentation</h1>
             <div class="link-grid">
-                <a href="requirements.html">📋 Requirements</a>
-                <a href="stakeholders.html">👥 Stakeholders</a>
+                <a href="functional_requirements.html">Funktionale Anforderungen</a>
+                <a href="nonfunctional_requirements.html">Nicht funktionale Anforderungen</a>
+                <a href="stakeholder.html">Stakeholder</a>
             </div>
         </div>
     </body>
