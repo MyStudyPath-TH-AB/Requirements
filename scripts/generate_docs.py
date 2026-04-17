@@ -3,8 +3,7 @@ import json
 import markdown2
 from pathlib import Path
 
-# Get the directory where the script is located
-TOP_LEVEL_DIR = Path(__file__).parent.parent  # Goes up from scripts/ to root
+TOP_LEVEL_DIR = Path(__file__).parent.parent  
 
 def parse_func_requirements():
     """Parse functional requirements folder structure and convert markdown to dict"""
@@ -42,31 +41,24 @@ def parse_nonfunc_requirements():
     """Parse nonfunctional requirements folder structure and convert markdown to dict"""
     nonfunc_requirements = {}
     req_path = TOP_LEVEL_DIR / "Nicht funktionale Anforderungen"
-    
-    for req_type in req_path.iterdir():
-        if not req_type.is_dir():
+        
+    for topic in req_path.iterdir():
+        if not topic.is_dir():
             continue
         
-        req_type_name = req_type.name
-        nonfunc_requirements[req_type_name] = {}
+        topic_name = topic.name
+        nonfunc_requirements[topic_name] = []
         
-        for topic in req_type.iterdir():
-            if not topic.is_dir():
-                continue
-            
-            topic_name = topic.name
-            nonfunc_requirements[req_type_name][topic_name] = []
-            
-            for req_file in topic.glob("*.md"):
-                with open(req_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    html_content = markdown2.markdown(content)
-                    
-                    nonfunc_requirements[req_type_name][topic_name].append({
-                        "file": req_file.name,
-                        "path": str(req_file),
-                        "content": html_content
-                    })
+        for req_file in topic.glob("*.md"):
+            with open(req_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+                html_content = markdown2.markdown(content)
+                
+                nonfunc_requirements[topic_name].append({
+                    "file": req_file.name,
+                    "path": str(req_file),
+                    "content": html_content
+                })
     
     return nonfunc_requirements
 
@@ -190,21 +182,18 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
             <h1>Nicht funktionale Anforderungen</h1>
     """
     
-    for req_type, topics in nonfunc_requirements.items():
+    for req_type, items in nonfunc_requirements.items():
         html += f'<div class="req-type"><h2>{req_type.replace("_", " ").title()}</h2>'
-        
-        for topic, items in topics.items():
-            html += f'<h3>{topic.replace("_", " ").title()}</h3>'
-            
-            for item in items:
-                html += f"""
-                <div class="req-item">
-                    <h4>{item['file'].replace('.md', '')}</h4>
-                    <div class="req-content">
-                        {item['content']}
-                    </div>
+         
+        for item in items:
+            html += f"""
+            <div class="req-item">
+                <h4>{item['file'].replace('.md', '')}</h4>
+                <div class="req-content">
+                    {item['content']}
                 </div>
-                """
+            </div>
+            """
         
         html += '</div>'
     
@@ -271,9 +260,6 @@ def generate_stakeholders_html(stakeholders):
     return html
 
 def main():
-
-    print(f"Looking for requirements in: {TOP_LEVEL_DIR}")
-    print(f"Stakeholder path exists: {(TOP_LEVEL_DIR / 'Stakeholder').exists()}")
     # Create docs directory
     os.makedirs('docs', exist_ok=True)
     
@@ -281,10 +267,6 @@ def main():
     func_requirements = parse_func_requirements()
     nonfunc_requirements = parse_nonfunc_requirements()
     stakeholders = parse_stakeholders()
-
-    print("Functional requirements:", json.dumps({k: list(v.keys()) for k, v in func_requirements.items()}, indent=2))
-    print("Non-functional requirements:", json.dumps({k: list(v.keys()) for k, v in nonfunc_requirements.items()}, indent=2))
-    # print("Stakeholders:", json.dumps({k: list(v.keys()) for k, v in stakeholders.items()}, indent=2))
     
     funcreq_html = generate_func_requirements_html(func_requirements)
     nonfuncreq_html = generate_nonfunc_requirements_html(nonfunc_requirements)
@@ -313,14 +295,14 @@ def main():
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
             .container { text-align: center; color: white; }
             h1 { font-size: 3em; margin-bottom: 30px; }
-            .link-grid { display: grid; grid-template-columns: repeat(2, 300px); gap: 20px; justify-content: center; }
+            .link-grid { display: grid; grid-template-columns: repeat(3, 300px); gap: 20px; justify-content: center; }
             a { display: block; padding: 40px; background: white; color: #333; text-decoration: none; border-radius: 8px; font-size: 1.3em; font-weight: bold; transition: transform 0.3s; }
             a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>📚 Project Documentation</h1>
+            <h1>Anforderungen</h1>
             <div class="link-grid">
                 <a href="functional_requirements.html">Funktionale Anforderungen</a>
                 <a href="nonfunctional_requirements.html">Nicht funktionale Anforderungen</a>
