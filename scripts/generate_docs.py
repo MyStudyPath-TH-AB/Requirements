@@ -284,8 +284,8 @@ def generate_stakeholders_html(stakeholders):
 
 def main():
 
-    print(f"Looking for requirements in: {REQUIREMENTS_DIR}")
-    print(f"Stakeholder path exists: {(REQUIREMENTS_DIR / 'Stakeholder').exists()}")
+    print(f"Looking for requirements in: {TOP_LEVEL_DIR}")
+    print(f"Stakeholder path exists: {(TOP_LEVEL_DIR / 'Stakeholder').exists()}")
     # Create docs directory
     os.makedirs('docs', exist_ok=True)
     
