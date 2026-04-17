@@ -3,10 +3,14 @@ import json
 import markdown2
 from pathlib import Path
 
+# Get the directory where the script is located
+SCRIPT_DIR = Path(__file__).parent.parent  # Goes up from scripts/ to root
+REQUIREMENTS_DIR = SCRIPT_DIR / "Requirements"
+
 def parse_func_requirements():
     """Parse functional requirements folder structure and convert markdown to dict"""
     func_requirements = {}
-    req_path = Path("Funktionale Anforderungen")
+    req_path = REQUIREMENTS_DIR / "Funktionale Anforderungen"
     
     for req_type in req_path.iterdir():
         if not req_type.is_dir():
@@ -36,9 +40,9 @@ def parse_func_requirements():
     return func_requirements
 
 def parse_nonfunc_requirements():
-    """Parse functional requirements folder structure and convert markdown to dict"""
+    """Parse nonfunctional requirements folder structure and convert markdown to dict"""
     nonfunc_requirements = {}
-    req_path = Path("Nicht funktionale Anforderungen")
+    req_path = REQUIREMENTS_DIR / "Nicht funktionale Anforderungen"
     
     for req_type in req_path.iterdir():
         if not req_type.is_dir():
@@ -70,7 +74,7 @@ def parse_nonfunc_requirements():
 def parse_stakeholders():
     """Parse stakeholder folder structure and convert markdown to dict"""
     stakeholders = {}
-    stakeholder_path = Path("Stakeholder")
+    stakeholder_path = REQUIREMENTS_DIR / "Stakeholder"
     
     for category in stakeholder_path.iterdir():
         if not category.is_dir():
@@ -280,6 +284,9 @@ def generate_stakeholders_html(stakeholders):
     return html
 
 def main():
+
+    print(f"Looking for requirements in: {REQUIREMENTS_DIR}")
+    print(f"Stakeholder path exists: {(REQUIREMENTS_DIR / 'Stakeholder').exists()}")
     # Create docs directory
     os.makedirs('docs', exist_ok=True)
     
