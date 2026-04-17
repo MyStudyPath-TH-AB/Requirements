@@ -87,7 +87,7 @@ def parse_stakeholders():
                 content = f.read()
                 html_content = markdown2.markdown(content)
                     
-                stakeholders[category_name][category_name].append({
+                stakeholders[category_name].append({
                     "file": stakeholder_file.name,
                     "path": str(stakeholder_file),
                     "content": html_content
