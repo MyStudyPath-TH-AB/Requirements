@@ -105,9 +105,9 @@ def generate_func_requirements_html(func_requirements):
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
             .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-            h1 { color: #0366d6; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
-            h2 { color: #24292e; margin-top: 30px; margin-bottom: 15px; }
-            h3 { color: #586069; margin-top: 20px; margin-bottom: 10px; }
+            h1 { color: #0366d6; font-size: 2.5em; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+            h2 { color: #24292e; font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
+            h3 { color: #586069; font-size: 1.3em; margin-top: 20px; margin-bottom: 10px; }
             .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
             .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
             .req-item h4 { color: #0366d6; margin-bottom: 8px; }
@@ -115,7 +115,7 @@ def generate_func_requirements_html(func_requirements):
     </head>
     <body>
         <div class="container">
-            <h1>📋 Requirements Documentation</h1>
+            <h1>Funktionale Anforderungen</h1>
     """
     
     for req_type, topics in func_requirements.items():
@@ -154,9 +154,9 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
             .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-            h1 { color: #0366d6; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
-            h2 { color: #24292e; margin-top: 30px; margin-bottom: 15px; }
-            h3 { color: #586069; margin-top: 20px; margin-bottom: 10px; }
+            h1 { color: #0366d6; font-size: 2.5em; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+            h2 { color: #24292e; font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
+            h3 { color: #586069; font-size: 1.3em; margin-top: 20px; margin-bottom: 10px; }
             .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
             .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
             .req-item h4 { color: #0366d6; margin-bottom: 8px; }
@@ -164,7 +164,7 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
     </head>
     <body>
         <div class="container">
-            <h1>📋 Requirements Documentation</h1>
+            <h1>Nicht funktionale Anforderungen</h1>
     """
     
     for req_type, topics in nonfunc_requirements.items():
@@ -211,15 +211,15 @@ def generate_stakeholders_html(stakeholders):
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
             .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-            h1 { color: #0366d6; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
-            h2 { color: #24292e; margin-top: 30px; margin-bottom: 15px; }
+            h1 { color: #0366d6; font-size: 2.5em; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+            h2 { color: #24292e; font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
             .stakeholder-card { background: white; padding: 20px; margin: 15px 0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-top: 4px solid #28a745; }
             .stakeholder-name { color: #28a745; font-size: 1.3em; font-weight: bold; margin-bottom: 10px; }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>👥 Stakeholders</h1>
+            <h1>Stakeholders</h1>
     """
     
     for category, sh_list in sorted(by_category.items()):
