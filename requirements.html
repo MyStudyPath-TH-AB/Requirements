@@ -1,0 +1,442 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Requirements</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+            .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+            h1 { color: #0366d6; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+            h2 { color: #24292e; margin-top: 30px; margin-bottom: 15px; }
+            h3 { color: #586069; margin-top: 20px; margin-bottom: 10px; }
+            .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+            .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
+            .req-item h4 { color: #0366d6; margin-bottom: 8px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>📋 Requirements Documentation</h1>
+    <div class="req-type"><h2>Allgemein</h2><h3>Internationalisierung</h3>
+                <div class="req-item">
+                    <h4>Englisch</h4>
+                    <!--ID: FA020-->
+
+<h2>Anforderung</h2>
+
+<p>Die Anwendung wird in englischer Sprache verfügbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>vgl. <a href="./Deutsch.md">deutsch</a></p>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Deutsch</h4>
+                    <!--ID: FA019-->
+
+<h2>Anforderung</h2>
+
+<p>Die Anwendung muss in deutscher Sprache verfügbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>vgl. <a href="./Englisch.md">englisch</a></p>
+
+                </div>
+                <h3>Zustimmung Datennutzung</h3>
+                <div class="req-item">
+                    <h4>Zustimmung-Datennutzung</h4>
+                    <!--ID: FA021-->
+
+<h2>Anforderung</h2>
+
+<p>Nutzer müssen der Nutzung ihrer Daten zustimmen, bevor sie die Anwendung verwenden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Muss bei erster Anmeldung erfolgen (bzw bis Zustimmung gegeben wurde).</li>
+<li>Zustimmung sollte jederzeit widerrufbar sein.</li>
+</ul>
+
+                </div>
+                </div><div class="req-type"><h2>Frontend Beratung</h2><h3>Übersicht</h3>
+                <div class="req-item">
+                    <h4>Übersicht</h4>
+                    <!--ID: FA026-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss eine Übersicht der Studenten angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Wenn man auf einen Studenten klickt, soll die Detailansicht des Studenten angezeigt werden.</li>
+<li>Die Studentenliste soll farblich sortiert sein.</li>
+<li>Nach dem login soll man hier landen.</li>
+</ul>
+
+                </div>
+                <h3>Detailansicht</h3>
+                <div class="req-item">
+                    <h4>Detailansicht</h4>
+                    <!--ID: FA026-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss eine Detailansicht eines bestimmten Studenten angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Die Detailansicht soll alle relevanten Informationen über den Studenten enthalten.</li>
+<li>Es soll möglich sein, Kommentare zu dem Studenten hinzuzufügen.</li>
+<li>Es soll einen Zurück Button geben, um zur Übersicht zurückzukehren.</li>
+</ul>
+
+                </div>
+                <h3>Willkommensseite</h3>
+                <div class="req-item">
+                    <h4>Logout Beratung</h4>
+                    <!--ID: FA025-->
+
+<h2>Anforderung</h2>
+
+<p>Nutzer müssen sich auf der Willkommensseite ausloggen können.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Login Beratung</h4>
+                    <!--ID: FA024-->
+
+<h2>Anforderung</h2>
+
+<p>Nutzer müssen sich auf der Willkommensseite einloggen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Authentifizierung mittels Hochschulaccount</p>
+
+                </div>
+                </div><div class="req-type"><h2>Backend</h2><h3>Authentifizierung</h3>
+                <div class="req-item">
+                    <h4>Logout</h4>
+                    <!--ID: FA015-->
+
+<h2>Anforderung</h2>
+
+<p>Das System muss sich aus dem Hochschulsystem ausloggen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Es muss sichergestellt werden, dass die Session des Nutzers im Hochschulsystem auch wirklich geschlossen wird, damit keine unbefugten Zugriffe möglich sind.</li>
+<li>vgl. <a href="./../../Frontend/Willkommensseite/Logout.md">Logout Frontend</a></li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Timeout</h4>
+                    <!--ID: FA016-->
+
+<h2>Anforderung</h2>
+
+<p>Bei zu langer Inaktivität soll der Nutzer automatisch ausgeloggt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Auch relevant, wenn der Nutzer den Browser oder die Seite schließt, damit keine unbefugten Zugriffe möglich sind.</p>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Login</h4>
+                    <!--ID: FA014-->
+
+<h2>Anforderung</h2>
+
+<p>Die Authentifizierung im Single Sign On System der Hochschule muss funktionieren.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>vgl. <a href="./../../Frontend/Willkommensseite/Login.md">Login Frontend</a></p>
+
+                </div>
+                <h3>Hisinone</h3>
+                <div class="req-item">
+                    <h4>HIS-Daten</h4>
+                    <!--ID: FA018-->
+
+<h2>Anforderung</h2>
+
+<p>Die bestehenden Daten im HISinOne-System sollen genutzt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Im HISinOne System liegen Noten und auch irgendwann die Studiengangpläne.</p>
+
+                </div>
+                <h3>Validierung</h3>
+                <div class="req-item">
+                    <h4>Eingabenvalidierung</h4>
+                    <!--ID: FA017-->
+
+<h2>Anforderung</h2>
+
+<p>Sollte es Freitexteingaben geben, müssen diese validiert werden.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                </div><div class="req-type"><h2>Frontend Student</h2><h3>Studienverlaufsplan</h3>
+                <div class="req-item">
+                    <h4>Abweichende-Studienpläne</h4>
+                    <!--ID: FA008-->
+
+<h2>Anforderung</h2>
+
+<p>Abweichende Studienpläne sollen angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Soll es eine Vergleichsansicht geben?</p>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Fachunterscheidung</h4>
+                    <!--ID: FA009-->
+
+<h2>Anforderung</h2>
+
+<p>Fächer innerhalb des Studienplans sollen sichtbar voneinander unterschieden werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Abgrenzungen anhand Fakultäten, Studiengängen oder Wahl/Pflicht.</li>
+<li>Semester müssen klar voneinander abgegrenzt sein.</li>
+<li>Fächer sollen klickbar sein, um weitere Informationen zu erhalten (siehe <a href="./../Fachübersicht/Fachübersicht.md">Fachübersicht</a>).</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Empfehlungen</h4>
+                    <!--ID: FA012-->
+
+<h2>Anforderung</h2>
+
+<p>Dem Benutzer müssen Empfehlungen angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Diese sollen strukturiert angezeigt werden.
+z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungsterminkollisionen, etc.</li>
+<li>Anzeige SPO + APO?</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Termine-Fristen</h4>
+                    <!--ID: FA013-->
+
+<h2>Anforderung</h2>
+
+<p>Dem Nutzer sollen relevante Termine und Fristen angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Studienplan</h4>
+                    <!--ID: FA007-->
+
+<h2>Anforderung</h2>
+
+<p>Abhängig vom Student muss der richtige Studienverlaufsplan angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Gibt es mehrere?</p>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Hinweis-Fehlende-Infos</h4>
+                    <!--ID: FA014-->
+
+<h2>Anforderung</h2>
+
+<p>Es soll einen Hinweis für den Nutzer geben, falls Informationen unvollständig vorliegen.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Wird dies überhaupt benötigt?</li>
+<li>Eventuell auch in der Eingabenansicht.</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Fortschrittsanzeige</h4>
+                    <!--ID: FA022-->
+
+<h2>Anforderung</h2>
+
+<p>Es wird eine Fortschrittsanzeige für den Studienverlaufsplan angezeigt.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Meilensteine könnten berücksichtigt werden.</li>
+<li>Eine Anzeige der erreichten und benötigten ECTS Punkte ist erwünscht.</li>
+</ul>
+
+                </div>
+                <h3>Eingabenansicht</h3>
+                <div class="req-item">
+                    <h4>Daten-Löschung</h4>
+                    <!--ID: FA023-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss die Möglichkeit haben, gespeicherte Daten zu löschen.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Es soll ein Modal zur Bestätigung angezeigt werden.</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Validierung</h4>
+                    <!--ID: FA011-->
+
+<h2>Anforderung</h2>
+
+<p>Eingaben des Nutzers müssen validiert werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Kein Problem bei Dropdown Feldern, aber bei Freitext Feldern muss sichergestellt werden, dass die Eingaben sinnvoll/nicht schädlich sind.</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Eingabenansicht</h4>
+                    <!--ID: FA010-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss die Möglichkeit haben, zusätzliche persönliche Informationen einzugeben.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Informationen könnten z.B. vorrangehende Ausbildungen, die momentane Semesterzahl, oder so empfundene Problemfächer sein.</li>
+</ul>
+
+                </div>
+                <h3>Willkommensseite</h3>
+                <div class="req-item">
+                    <h4>Login Student</h4>
+                    <!--ID: FA005-->
+
+<h2>Anforderung</h2>
+
+<p>Nutzer müssen sich auf der Willkommensseite einloggen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Authentifizierung mittels Hochschulaccount</p>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Navigation-Studienplan</h4>
+                    <!--ID: FA002-->
+
+<h2>Anforderung</h2>
+
+<p>Die Studienplan Ansicht muss von der Willkommensseite aus erreichbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Willkommensseite</h4>
+                    <!--ID: FA001-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss eine Willkommensseite geben.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Login</li>
+<li>Logout</li>
+</ul>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Navigation-Informationseingabe</h4>
+                    <!--ID: FA004-->
+
+<h2>Anforderung</h2>
+
+<p>Die Informationseingaben Ansicht muss von der Willkommensseite aus erreichbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                
+                <div class="req-item">
+                    <h4>Logout Student</h4>
+                    <!--ID: FA006-->
+
+<h2>Anforderung</h2>
+
+<p>Nutzer müssen sich auf der Willkommensseite ausloggen können.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                <h3>Fach-Detailansicht</h3>
+                <div class="req-item">
+                    <h4>Fach-Detailansicht</h4>
+                    <!--ID: FA003-->
+
+<h2>Anforderung</h2>
+
+<p>Es soll eine Detail Ansicht eines bestimmten Faches angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+                </div>
+                </div>
+        </div>
+    </body>
+    </html>
+    
