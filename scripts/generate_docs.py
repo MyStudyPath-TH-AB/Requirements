@@ -81,24 +81,17 @@ def parse_stakeholders():
         
         category_name = category.name
         stakeholders[category_name] = {}
-        
-        for subcategory in category.iterdir():
-            if not subcategory.is_dir():
-                continue
-            
-            subcategory_name = subcategory.name
-            stakeholders[category_name][subcategory_name] = []
-            
-            for stakeholder_file in subcategory.glob("*.md"):
-                with open(stakeholder_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    html_content = markdown2.markdown(content)
+         
+        for stakeholder_file in category.rglob("*.md"):
+            with open(stakeholder_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+                html_content = markdown2.markdown(content)
                     
-                    stakeholders[category_name][subcategory_name].append({
-                        "file": stakeholder_file.name,
-                        "path": str(stakeholder_file),
-                        "content": html_content
-                    })
+                stakeholders[category_name][category_name].append({
+                    "file": stakeholder_file.name,
+                    "path": str(stakeholder_file),
+                    "content": html_content
+                })
     
     return stakeholders
 
