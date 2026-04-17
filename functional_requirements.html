@@ -37,7 +37,7 @@
 
 <h2>Anforderung</h2>
 
-<p>Die Anwendung wird in englischer Sprache verfügbar sein.</p>
+<p>Die Anwendung muss in englischer Sprache verfügbar sein.</p>
 
 <h2>Anmerkungen</h2>
 
@@ -100,11 +100,48 @@
 
                     </div>
                 </div>
+                
+                <div class="req-item">
+                    <h4>Filterfunktion</h4>
+                    <div class="req-content">
+                        <!--ID: FA031-->
+
+<h2>Anforderung</h2>
+
+<p>Es soll eine Filterfunktion für die Studentenübersicht angeboten werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Man soll nach Studiengang, Semester, Fehlversuchen, Risikostatus etc. filtern können</li>
+<li>Eventuell auch zur Sortierung der Studentenliste</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Suchfunktion</h4>
+                    <div class="req-content">
+                        <!--ID: FA030-->
+
+<h2>Anforderung</h2>
+
+<p>Es soll eine Suchfunktion der Studenten angeboten werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Man soll nach Name, Matrikelnummer, Studiengang, Semester, etc. suchen können</li>
+</ul>
+
+                    </div>
+                </div>
                 <h3>Detailansicht</h3>
                 <div class="req-item">
                     <h4>Detailansicht</h4>
                     <div class="req-content">
-                        <!--ID: FA026-->
+                        <!--ID: FA027-->
 
 <h2>Anforderung</h2>
 
@@ -128,9 +165,27 @@
 
 <h2>Anforderung</h2>
 
-<p>Nutzer müssen sich auf der Willkommensseite ausloggen können.</p>
+<p>Nutzer müssen sich ausloggen können.</p>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Willkommensseite</h4>
+                    <div class="req-content">
+                        <!--ID: FA028-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss eine Willkommensseite geben.</p>
 
 <h2>Anmerkungen</h2>
+
+<ul>
+<li>Login</li>
+<li>Logout</li>
+<li>Kann eventuell die Gleiche sein wie für die Studierenden</li>
+</ul>
 
                     </div>
                 </div>
@@ -375,6 +430,26 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
                 </div>
                 
                 <div class="req-item">
+                    <h4>Eingabenaufbau</h4>
+                    <div class="req-content">
+                        <!--ID: FA032-->
+
+<h2>Anforderung</h2>
+
+<p>Die Eingabefelder sollen in wichtig und weniger wichtig unterteilt und entsprechend angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Wichtige Eingabenfelder sollen direkt angezeigt werden</li>
+<li>Weniger wichtige Eingabefelder sollen in einem Dropdown oder ähnlichem versteckt werden, um die Übersicht zu verbessern</li>
+<li>Es soll eine Möglichkeit geben, zwischen der Anzeige aller Eingabefelder und nur der wichtigen Eingabefelder zu wechseln</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
                     <h4>Validierung</h4>
                     <div class="req-content">
                         <!--ID: FA011-->
@@ -393,6 +468,25 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
                 </div>
                 
                 <div class="req-item">
+                    <h4>Einwilligung-Daten</h4>
+                    <div class="req-content">
+                        <!--ID: FA029-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss eine Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Vermutlich im Modal</li>
+<li>Speicherung der Einwilligung in der DB</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
                     <h4>Eingabenansicht</h4>
                     <div class="req-content">
                         <!--ID: FA010-->
@@ -404,7 +498,40 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Informationen könnten z.B. vorrangehende Ausbildungen, die momentane Semesterzahl, oder so empfundene Problemfächer sein.</li>
+<li>Muss Datenfelder:
+<ul>
+<li>Körperliche Beeinträchtigungen</li>
+<li>Psychische Beeinträchtigungen</li>
+<li>Lernstörungen</li>
+<li>Muttersprache</li>
+<li>Zeitbedürfnisse neben Studium(zb Nebenjob, Kinder, Pflege etc.)</li>
+<li>vorherige Studiengänge</li>
+<li>Studienbeginn</li>
+<li>Berufserfahrung</li>
+<li>Internationalität (Im Sinne von "Bin ich interntionaler Student oder nicht?")</li>
+<li>Studienmotivation</li>
+<li>familiärer Hintergrund</li>
+<li>Sonstige Informationen (Freitextfeld)</li>
+</ul></li>
+<li>Soll Datenfelder:
+<ul>
+<li>Bildungsverlauf</li>
+<li>Prüfungsängstlichkeit</li>
+<li>Lern/Leistungsmotivation</li>
+<li>Abschlussnote Schule Hauptfächer (Englisch, Mathe, Deutsch)</li>
+<li>Studienstatus (Erststudium, Zweitstudium, Studium nach Ausbildung etc.)</li>
+<li>Lebens/Wohnsituation (->Pendeln, Wohnen in Studentenwohnheim, Wohnen bei Eltern etc.)</li>
+<li>Fällt es dir leicht das Studium zu finanzieren? (Ja/Nein)</li>
+</ul></li>
+<li>Wird Datenfelder (nice to have):
+<ul>
+<li>Studienbezogene Interessen</li>
+<li>akademisches Selbstkonzept</li>
+<li>metakognitives Bewusstsein über Lernstrategien</li>
+<li>Umgang mit Stress/Belastung</li>
+<li>Soziale Eingebundenheit (Freunde, Familie, Kommilitonen etc.)</li>
+<li>Ich benötige vorraussichtlich Unterstützung bei (->Studienfach)</li>
+</ul></li>
 </ul>
 
                     </div>
@@ -482,8 +609,6 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <p>Nutzer müssen sich auf der Willkommensseite ausloggen können.</p>
 
-<h2>Anmerkungen</h2>
-
                     </div>
                 </div>
                 <h3>Fach-Detailansicht</h3>
@@ -495,8 +620,6 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 <h2>Anforderung</h2>
 
 <p>Es soll eine Detail Ansicht eines bestimmten Faches angezeigt werden können.</p>
-
-<h2>Anmerkungen</h2>
 
                     </div>
                 </div>
