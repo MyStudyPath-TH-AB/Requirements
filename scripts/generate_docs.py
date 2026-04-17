@@ -287,6 +287,10 @@ def main():
     func_requirements = parse_func_requirements()
     nonfunc_requirements = parse_nonfunc_requirements()
     stakeholders = parse_stakeholders()
+
+    print("Functional requirements:", json.dumps({k: list(v.keys()) for k, v in func_requirements.items()}, indent=2))
+    print("Non-functional requirements:", json.dumps({k: list(v.keys()) for k, v in nonfunc_requirements.items()}, indent=2))
+    print("Stakeholders:", json.dumps({k: list(v.keys()) for k, v in stakeholders.items()}, indent=2))
     
     funcreq_html = generate_func_requirements_html(func_requirements)
     nonfuncreq_html = generate_nonfunc_requirements_html(nonfunc_requirements)
