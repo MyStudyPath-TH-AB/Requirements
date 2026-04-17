@@ -68,27 +68,34 @@ def parse_nonfunc_requirements():
     return nonfunc_requirements
 
 def parse_stakeholders():
-    """Parse stakeholders folder structure"""
-    stakeholders = []
-    stakeholder_path = Path("Stakeholders")
+    """Parse stakeholder folder structure and convert markdown to dict"""
+    stakeholders = {}
+    stakeholder_path = Path("Stakeholder")
     
-    if not stakeholder_path.exists():
-        return stakeholders
-    
-    for topic_folder in stakeholder_path.iterdir():
-        if not topic_folder.is_dir():
+    for category in stakeholder_path.iterdir():
+        if not category.is_dir():
             continue
         
-        for md_file in topic_folder.glob("*.md"):
-            with open(md_file, 'r', encoding='utf-8') as f:
-                content = f.read()
-                html_content = markdown2.markdown(content)
-                
-                stakeholders.append({
-                    "name": md_file.stem,
-                    "category": topic_folder.name,
-                    "content": html_content
-                })
+        category_name = category.name
+        stakeholders[category_name] = {}
+        
+        for subcategory in category.iterdir():
+            if not subcategory.is_dir():
+                continue
+            
+            subcategory_name = subcategory.name
+            stakeholders[category_name][subcategory_name] = []
+            
+            for stakeholder_file in subcategory.rglob("*.md"):
+                with open(stakeholder_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    html_content = markdown2.markdown(content)
+                    
+                    stakeholders[category_name][subcategory_name].append({
+                        "file": stakeholder_file.name,
+                        "path": str(stakeholder_file),
+                        "content": html_content
+                    })
     
     return stakeholders
 
