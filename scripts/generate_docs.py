@@ -221,14 +221,6 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
 
 def generate_stakeholders_html(stakeholders):
     """Generate HTML page for stakeholders"""
-    # Group by category
-    by_category = {}
-    for sh in stakeholders:
-        cat = sh['category']
-        if cat not in by_category:
-            by_category[cat] = []
-        by_category[cat].append(sh)
-    
     html = """
     <!DOCTYPE html>
     <html lang="en">
@@ -242,8 +234,10 @@ def generate_stakeholders_html(stakeholders):
             .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
             h1 { color: #0366d6; font-size: 2.5em; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
             h2 { color: #24292e; font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
-            .stakeholder-card { background: white; padding: 20px; margin: 15px 0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-top: 4px solid #28a745; }
-            .stakeholder-name { color: #28a745; font-size: 1.3em; font-weight: bold; margin-bottom: 10px; }
+            h3 { color: #586069; font-size: 1.3em; margin-top: 20px; margin-bottom: 10px; }
+            .stakeholder-category { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+            .stakeholder-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #28a745; border-radius: 4px; }
+            .stakeholder-item h4 { color: #28a745; margin-bottom: 8px; }
             
             /* Custom styling for markdown content */
             .stakeholder-content { font-size: 0.95em; }
@@ -260,18 +254,23 @@ def generate_stakeholders_html(stakeholders):
             <h1>Stakeholders</h1>
     """
     
-    for category, sh_list in sorted(by_category.items()):
-        html += f'<h2>{category.replace("_", " ").title()}</h2>'
+    for category, subcategories in stakeholders.items():
+        html += f'<div class="stakeholder-category"><h2>{category.replace("_", " ").title()}</h2>'
         
-        for sh in sh_list:
-            html += f"""
-            <div class="stakeholder-card">
-                <div class="stakeholder-name">{sh['name'].replace('_', ' ').title()}</div>
-                <div class="stakeholder-content">
-                    {sh['content']}
+        for subcategory, items in subcategories.items():
+            html += f'<h3>{subcategory.replace("_", " ").title()}</h3>'
+            
+            for item in items:
+                html += f"""
+                <div class="stakeholder-item">
+                    <h4>{item['file'].replace('.md', '')}</h4>
+                    <div class="stakeholder-content">
+                        {item['content']}
+                    </div>
                 </div>
-            </div>
-            """
+                """
+        
+        html += '</div>'
     
     html += """
         </div>
