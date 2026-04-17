@@ -80,7 +80,7 @@ def parse_stakeholders():
             continue
         
         category_name = category.name
-        stakeholders[category_name] = {}
+        stakeholders[category_name] = []
          
         for stakeholder_file in category.rglob("*.md"):
             with open(stakeholder_file, 'r', encoding='utf-8') as f:
