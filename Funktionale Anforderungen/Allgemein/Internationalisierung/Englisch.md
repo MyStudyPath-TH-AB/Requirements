@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Die Anwendung wird in englischer Sprache verfügbar sein.
+Die Anwendung muss in englischer Sprache verfügbar sein.
 
 ## Anmerkungen
 

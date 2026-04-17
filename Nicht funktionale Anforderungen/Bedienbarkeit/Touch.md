@@ -2,8 +2,9 @@
 
 ## Anforderung
 
-Beide Frontends müssen mittels Touch bedienbar sein.
+Das Studenten Frontend muss mittels Touch bedienbar sein.
 
 ## Anmerkungen
 
-vgl. [Plattformunabhängigkeit](./../Plattformunabhängigkeit/Tablet.md)
+- Mobile first styling
+- vgl. [Plattformunabhängigkeit](./../Plattformunabhängigkeit/Tablet.md)

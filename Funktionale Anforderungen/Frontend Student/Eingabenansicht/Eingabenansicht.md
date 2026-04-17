@@ -6,5 +6,31 @@ Der Nutzer muss die Möglichkeit haben, zusätzliche persönliche Informationen 
 
 ## Anmerkungen
 
-- Informationen könnten z.B. vorrangehende Ausbildungen, die momentane Semesterzahl, oder so empfundene Problemfächer sein.
-  
+- Muss Datenfelder:
+    - Körperliche Beeinträchtigungen
+    - Psychische Beeinträchtigungen
+    - Lernstörungen
+    - Muttersprache
+    - Zeitbedürfnisse neben Studium(zb Nebenjob, Kinder, Pflege etc.)
+    - vorherige Studiengänge
+    - Studienbeginn
+    - Berufserfahrung
+    - Internationalität (Im Sinne von "Bin ich interntionaler Student oder nicht?")
+    - Studienmotivation
+    - familiärer Hintergrund
+    - Sonstige Informationen (Freitextfeld)
+- Soll Datenfelder:
+    - Bildungsverlauf
+    - Prüfungsängstlichkeit
+    - Lern/Leistungsmotivation
+    - Abschlussnote Schule Hauptfächer (Englisch, Mathe, Deutsch)
+    - Studienstatus (Erststudium, Zweitstudium, Studium nach Ausbildung etc.)
+    - Lebens/Wohnsituation (->Pendeln, Wohnen in Studentenwohnheim, Wohnen bei Eltern etc.)
+    - Fällt es dir leicht das Studium zu finanzieren? (Ja/Nein)
+- Wird Datenfelder (nice to have):
+    - Studienbezogene Interessen
+    - akademisches Selbstkonzept
+    - metakognitives Bewusstsein über Lernstrategien
+    - Umgang mit Stress/Belastung
+    - Soziale Eingebundenheit (Freunde, Familie, Kommilitonen etc.)
+    - Ich benötige vorraussichtlich Unterstützung bei (->Studienfach)

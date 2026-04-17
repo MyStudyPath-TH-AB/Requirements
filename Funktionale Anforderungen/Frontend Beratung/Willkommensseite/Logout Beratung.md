@@ -2,8 +2,7 @@
 
 ## Anforderung
 
-Nutzer müssen sich auf der Willkommensseite ausloggen können.
+Nutzer müssen sich ausloggen können.
 
-## Anmerkungen
 
 

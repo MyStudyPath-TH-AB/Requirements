@@ -1,0 +1,9 @@
+<!--ID: FA030-->
+
+## Anforderung
+
+Es soll eine Suchfunktion der Studenten angeboten werden.
+
+## Anmerkungen
+
+- Man soll nach Name, Matrikelnummer, Studiengang, Semester, etc. suchen können
