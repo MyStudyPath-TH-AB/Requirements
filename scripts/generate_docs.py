@@ -3,37 +3,69 @@ import json
 import markdown2
 from pathlib import Path
 
-def parse_requirements():
-    """Parse requirements folder structure and convert markdown to dict"""
-    requirements = {}
-    req_path = Path("Requirements")
+def parse_func_requirements():
+    """Parse functional requirements folder structure and convert markdown to dict"""
+    func_requirements = {}
+    req_path = Path("Funktionale Anforderungen")
     
     for req_type in req_path.iterdir():
         if not req_type.is_dir():
             continue
         
         req_type_name = req_type.name
-        requirements[req_type_name] = {}
+        func_requirements[req_type_name] = {}
         
         for topic in req_type.iterdir():
             if not topic.is_dir():
                 continue
             
             topic_name = topic.name
-            requirements[req_type_name][topic_name] = []
+            func_requirements[req_type_name][topic_name] = []
             
             for req_file in topic.rglob("*.md"):
                 with open(req_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     html_content = markdown2.markdown(content)
                     
-                    requirements[req_type_name][topic_name].append({
+                    func_requirements[req_type_name][topic_name].append({
                         "file": req_file.name,
                         "path": str(req_file),
                         "content": html_content
                     })
     
-    return requirements
+    return func_requirements
+
+def parse_nonfunc_requirements():
+    """Parse functional requirements folder structure and convert markdown to dict"""
+    nonfunc_requirements = {}
+    req_path = Path("Nicht funktionale Anforderungen")
+    
+    for req_type in req_path.iterdir():
+        if not req_type.is_dir():
+            continue
+        
+        req_type_name = req_type.name
+        nonfunc_requirements[req_type_name] = {}
+        
+        for topic in req_type.iterdir():
+            if not topic.is_dir():
+                continue
+            
+            topic_name = topic.name
+            nonfunc_requirements[req_type_name][topic_name] = []
+            
+            for req_file in topic.rglob("*.md"):
+                with open(req_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    html_content = markdown2.markdown(content)
+                    
+                    nonfunc_requirements[req_type_name][topic_name].append({
+                        "file": req_file.name,
+                        "path": str(req_file),
+                        "content": html_content
+                    })
+    
+    return nonfunc_requirements
 
 def parse_stakeholders():
     """Parse stakeholders folder structure"""
@@ -60,7 +92,7 @@ def parse_stakeholders():
     
     return stakeholders
 
-def generate_requirements_html(requirements):
+def generate_func_requirements_html(func_requirements):
     """Generate HTML page for requirements"""
     html = """
     <!DOCTYPE html>
@@ -86,7 +118,56 @@ def generate_requirements_html(requirements):
             <h1>📋 Requirements Documentation</h1>
     """
     
-    for req_type, topics in requirements.items():
+    for req_type, topics in func_requirements.items():
+        html += f'<div class="req-type"><h2>{req_type.replace("_", " ").title()}</h2>'
+        
+        for topic, items in topics.items():
+            html += f'<h3>{topic.replace("_", " ").title()}</h3>'
+            
+            for item in items:
+                html += f"""
+                <div class="req-item">
+                    <h4>{item['file'].replace('.md', '')}</h4>
+                    {item['content']}
+                </div>
+                """
+        
+        html += '</div>'
+    
+    html += """
+        </div>
+    </body>
+    </html>
+    """
+    return html
+
+def generate_nonfunc_requirements_html(nonfunc_requirements):
+    """Generate HTML page for requirements"""
+    html = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Requirements</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+            .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+            h1 { color: #0366d6; margin-bottom: 30px; border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+            h2 { color: #24292e; margin-top: 30px; margin-bottom: 15px; }
+            h3 { color: #586069; margin-top: 20px; margin-bottom: 10px; }
+            .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+            .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
+            .req-item h4 { color: #0366d6; margin-bottom: 8px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>📋 Requirements Documentation</h1>
+    """
+    
+    for req_type, topics in nonfunc_requirements.items():
         html += f'<div class="req-type"><h2>{req_type.replace("_", " ").title()}</h2>'
         
         for topic, items in topics.items():
@@ -164,10 +245,12 @@ def main():
     os.makedirs('docs', exist_ok=True)
     
     # Generate pages
-    requirements = parse_requirements()
+    func_requirements = parse_func_requirements()
+    nonfunc_requirements = parse_nonfunc_requirements()
     stakeholders = parse_stakeholders()
     
-    req_html = generate_requirements_html(requirements)
+    req_html = generate_func_requirements_html(func_requirements)
+    nonfunc_html = generate_nonfunc_requirements_html(nonfunc_requirements)
     sh_html = generate_stakeholders_html(stakeholders)
     
     # Write files
