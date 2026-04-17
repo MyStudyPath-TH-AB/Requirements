@@ -111,6 +111,15 @@ def generate_func_requirements_html(func_requirements):
             .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
             .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
             .req-item h4 { color: #0366d6; margin-bottom: 8px; }
+            
+            /* Custom styling for markdown content */
+            .req-content { font-size: 0.95em; }
+            .req-content h2 { font-size: 1.1em; color: #24292e; font-weight: 600; margin: 15px 0 8px 0; }
+            .req-content h3 { font-size: 0.95em; color: #586069; font-weight: 600; margin: 12px 0 6px 0; }
+            .req-content h4, .req-content h5, .req-content h6 { font-size: 0.9em; color: #666; font-weight: 600; margin: 10px 0 5px 0; }
+            .req-content p { margin: 8px 0; }
+            .req-content a { color: #0366d6; text-decoration: none; }
+            .req-content a:hover { text-decoration: underline; }
         </style>
     </head>
     <body>
@@ -128,7 +137,9 @@ def generate_func_requirements_html(func_requirements):
                 html += f"""
                 <div class="req-item">
                     <h4>{item['file'].replace('.md', '')}</h4>
-                    {item['content']}
+                    <div class="req-content">
+                        {item['content']}
+                    </div>
                 </div>
                 """
         
@@ -160,6 +171,15 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
             .req-type { background: white; padding: 20px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
             .req-item { background: #f6f8fa; padding: 15px; margin: 10px 0; border-left: 4px solid #0366d6; border-radius: 4px; }
             .req-item h4 { color: #0366d6; margin-bottom: 8px; }
+            
+            /* Custom styling for markdown content */
+            .req-content { font-size: 0.95em; }
+            .req-content h2 { font-size: 1.1em; color: #24292e; font-weight: 600; margin: 15px 0 8px 0; }
+            .req-content h3 { font-size: 0.95em; color: #586069; font-weight: 600; margin: 12px 0 6px 0; }
+            .req-content h4, .req-content h5, .req-content h6 { font-size: 0.9em; color: #666; font-weight: 600; margin: 10px 0 5px 0; }
+            .req-content p { margin: 8px 0; }
+            .req-content a { color: #0366d6; text-decoration: none; }
+            .req-content a:hover { text-decoration: underline; }
         </style>
     </head>
     <body>
@@ -177,7 +197,9 @@ def generate_nonfunc_requirements_html(nonfunc_requirements):
                 html += f"""
                 <div class="req-item">
                     <h4>{item['file'].replace('.md', '')}</h4>
-                    {item['content']}
+                    <div class="req-content">
+                        {item['content']}
+                    </div>
                 </div>
                 """
         
@@ -215,6 +237,15 @@ def generate_stakeholders_html(stakeholders):
             h2 { color: #24292e; font-size: 1.8em; margin-top: 30px; margin-bottom: 15px; }
             .stakeholder-card { background: white; padding: 20px; margin: 15px 0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-top: 4px solid #28a745; }
             .stakeholder-name { color: #28a745; font-size: 1.3em; font-weight: bold; margin-bottom: 10px; }
+            
+            /* Custom styling for markdown content */
+            .stakeholder-content { font-size: 0.95em; }
+            .stakeholder-content h2 { font-size: 1.1em; color: #24292e; font-weight: 600; margin: 15px 0 8px 0; }
+            .stakeholder-content h3 { font-size: 0.95em; color: #586069; font-weight: 600; margin: 12px 0 6px 0; }
+            .stakeholder-content h4, .stakeholder-content h5, .stakeholder-content h6 { font-size: 0.9em; color: #666; font-weight: 600; margin: 10px 0 5px 0; }
+            .stakeholder-content p { margin: 8px 0; }
+            .stakeholder-content a { color: #0366d6; text-decoration: none; }
+            .stakeholder-content a:hover { text-decoration: underline; }
         </style>
     </head>
     <body>
@@ -229,7 +260,9 @@ def generate_stakeholders_html(stakeholders):
             html += f"""
             <div class="stakeholder-card">
                 <div class="stakeholder-name">{sh['name'].replace('_', ' ').title()}</div>
-                {sh['content']}
+                <div class="stakeholder-content">
+                    {sh['content']}
+                </div>
             </div>
             """
     
