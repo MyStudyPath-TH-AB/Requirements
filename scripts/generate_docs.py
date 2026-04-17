@@ -4,13 +4,12 @@ import markdown2
 from pathlib import Path
 
 # Get the directory where the script is located
-SCRIPT_DIR = Path(__file__).parent.parent  # Goes up from scripts/ to root
-REQUIREMENTS_DIR = SCRIPT_DIR 
+TOP_LEVEL_DIR = Path(__file__).parent.parent  # Goes up from scripts/ to root
 
 def parse_func_requirements():
     """Parse functional requirements folder structure and convert markdown to dict"""
     func_requirements = {}
-    req_path = REQUIREMENTS_DIR / "Funktionale Anforderungen"
+    req_path = TOP_LEVEL_DIR / "Funktionale Anforderungen"
     
     for req_type in req_path.iterdir():
         if not req_type.is_dir():
@@ -42,7 +41,7 @@ def parse_func_requirements():
 def parse_nonfunc_requirements():
     """Parse nonfunctional requirements folder structure and convert markdown to dict"""
     nonfunc_requirements = {}
-    req_path = REQUIREMENTS_DIR / "Nicht funktionale Anforderungen"
+    req_path = TOP_LEVEL_DIR / "Nicht funktionale Anforderungen"
     
     for req_type in req_path.iterdir():
         if not req_type.is_dir():
@@ -58,7 +57,7 @@ def parse_nonfunc_requirements():
             topic_name = topic.name
             nonfunc_requirements[req_type_name][topic_name] = []
             
-            for req_file in topic.rglob("*.md"):
+            for req_file in topic.glob("*.md"):
                 with open(req_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     html_content = markdown2.markdown(content)
@@ -74,7 +73,7 @@ def parse_nonfunc_requirements():
 def parse_stakeholders():
     """Parse stakeholder folder structure and convert markdown to dict"""
     stakeholders = {}
-    stakeholder_path = REQUIREMENTS_DIR / "Stakeholder"
+    stakeholder_path = TOP_LEVEL_DIR / "Stakeholder"
     
     for category in stakeholder_path.iterdir():
         if not category.is_dir():
@@ -90,7 +89,7 @@ def parse_stakeholders():
             subcategory_name = subcategory.name
             stakeholders[category_name][subcategory_name] = []
             
-            for stakeholder_file in subcategory.rglob("*.md"):
+            for stakeholder_file in subcategory.glob("*.md"):
                 with open(stakeholder_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     html_content = markdown2.markdown(content)
