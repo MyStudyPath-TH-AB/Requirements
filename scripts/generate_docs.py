@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Get the directory where the script is located
 SCRIPT_DIR = Path(__file__).parent.parent  # Goes up from scripts/ to root
-REQUIREMENTS_DIR = SCRIPT_DIR / "Requirements"
+REQUIREMENTS_DIR = SCRIPT_DIR 
 
 def parse_func_requirements():
     """Parse functional requirements folder structure and convert markdown to dict"""
