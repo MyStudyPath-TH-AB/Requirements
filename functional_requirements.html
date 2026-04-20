@@ -69,13 +69,16 @@
 
 <h2>Anforderung</h2>
 
-<p>Nutzer müssen der Nutzung ihrer Daten zustimmen, bevor sie die Anwendung verwenden können.</p>
+<p>Der Nutzer muss eine Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
 <li>Muss bei erster Anmeldung erfolgen (bzw bis Zustimmung gegeben wurde).</li>
 <li>Zustimmung sollte jederzeit widerrufbar sein.</li>
+<li>(Eventuell redundante Anforderung)</li>
+<li>Zustimmung muss unterschiedlich für Studierende und Hochschulmitarbeitende sein</li>
+<li>Nutzungsbedingungen und Datenschutzrichtlinie</li>
 </ul>
 
                     </div>
@@ -205,6 +208,97 @@
 
                     </div>
                 </div>
+                </div><div class="req-type"><h2>Frontend Ki-Assistent</h2><h3>Schnittstellen</h3>
+                <div class="req-item">
+                    <h4>Schnittstellen</h4>
+                    <div class="req-content">
+                        <!--ID: FA029-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss Schnittstellen zum Backend geben.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Bisher undefiniert.</li>
+</ul>
+
+                    </div>
+                </div>
+                <h3>Sonstiges</h3>
+                <div class="req-item">
+                    <h4>Datenschutz</h4>
+                    <div class="req-content">
+                        <!--ID: FA035-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss nochmals die Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Spezifisch für die Verarbeitung durch die KI.</li>
+</ul>
+
+                    </div>
+                </div>
+                <h3>Prompting</h3>
+                <div class="req-item">
+                    <h4>Problemerkennung</h4>
+                    <div class="req-content">
+                        <!--ID: FA035-->
+
+<h2>Anforderung</h2>
+
+<p>Die KI muss in der Lage sein, Problemerkennung durchzuführen.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Problemerkennung bezüglich des Lernverhaltens des Studenten</li>
+<li>Erkennung von Schwachstellen im Lernprozess</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Lerntechniken</h4>
+                    <div class="req-content">
+                        <!--ID: FA034-->
+
+<h2>Anforderung</h2>
+
+<p>Die KI muss Lerntechniken empfehlen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Welche Lerntechniken? </li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Lernmaterial</h4>
+                    <div class="req-content">
+                        <!--ID: FA033-->
+
+<h2>Anforderung</h2>
+
+<p>Die KI muss mit Lernmaterialien umgehen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Lernmaterial woher?</li>
+</ul>
+
+                    </div>
+                </div>
                 </div><div class="req-type"><h2>Backend</h2><h3>Authentifizierung</h3>
                 <div class="req-item">
                     <h4>Logout</h4>
@@ -304,6 +398,24 @@
                 </div>
                 
                 <div class="req-item">
+                    <h4>Studienverlaufsplan</h4>
+                    <div class="req-content">
+                        <!--ID: FA007-->
+
+<h2>Anforderung</h2>
+
+<p>Abhängig vom Student muss der richtige Studienverlaufsplan angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Abhängig vom Beginn des Studiums (da sich die Pläne teilweise ändern)</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
                     <h4>Fachunterscheidung</h4>
                     <div class="req-content">
                         <!--ID: FA009-->
@@ -318,6 +430,7 @@
 <li>Abgrenzungen anhand Fakultäten, Studiengängen oder Wahl/Pflicht.</li>
 <li>Semester müssen klar voneinander abgegrenzt sein.</li>
 <li>Fächer sollen klickbar sein, um weitere Informationen zu erhalten (siehe <a href="./../Fachübersicht/Fachübersicht.md">Fachübersicht</a>).</li>
+<li>Studiprojekt 'Persönlicher Studienverlaufsplan'</li>
 </ul>
 
                     </div>
@@ -330,7 +443,7 @@
 
 <h2>Anforderung</h2>
 
-<p>Dem Benutzer müssen Empfehlungen angezeigt werden.</p>
+<p>Dem Benutzer müssen studienbezogene Empfehlungen angezeigt werden.</p>
 
 <h2>Anmerkungen</h2>
 
@@ -338,6 +451,8 @@
 <li>Diese sollen strukturiert angezeigt werden.
 z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungsterminkollisionen, etc.</li>
 <li>Anzeige SPO + APO?</li>
+<li>Hinweis auf Grundlagen und Orientierungsfächer, bzw etwaigen ECTS Meilensteinen</li>
+<li>Hinweis zu Prüfungseinsichten (vor allem bei nicht bestandenen Prüfungen)</li>
 </ul>
 
                     </div>
@@ -354,21 +469,27 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <h2>Anmerkungen</h2>
 
+<ul>
+<li>Plus verlinkung zu relevanten Informationen (z.B. Prüfungsanmeldung, Rückmeldung, etc.)</li>
+</ul>
+
                     </div>
                 </div>
                 
                 <div class="req-item">
-                    <h4>Studienplan</h4>
+                    <h4>Beratungsstellen</h4>
                     <div class="req-content">
-                        <!--ID: FA007-->
+                        <!--ID: FA022-->
 
 <h2>Anforderung</h2>
 
-<p>Abhängig vom Student muss der richtige Studienverlaufsplan angezeigt werden.</p>
+<p>Dem Nutzer muss ein statischer Hinweis bezüglich den Beratungsstellen der Hochschule angezeigt werden.</p>
 
 <h2>Anmerkungen</h2>
 
-<p>Gibt es mehrere?</p>
+<ul>
+<li>Welche Beratungsstellen gibt es?</li>
+</ul>
 
                     </div>
                 </div>
@@ -387,25 +508,6 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 <ul>
 <li>Wird dies überhaupt benötigt?</li>
 <li>Eventuell auch in der Eingabenansicht.</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Fortschrittsanzeige</h4>
-                    <div class="req-content">
-                        <!--ID: FA022-->
-
-<h2>Anforderung</h2>
-
-<p>Es wird eine Fortschrittsanzeige für den Studienverlaufsplan angezeigt.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Meilensteine könnten berücksichtigt werden.</li>
-<li>Eine Anzeige der erreichten und benötigten ECTS Punkte ist erwünscht.</li>
 </ul>
 
                     </div>
@@ -462,25 +564,6 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <ul>
 <li>Kein Problem bei Dropdown Feldern, aber bei Freitext Feldern muss sichergestellt werden, dass die Eingaben sinnvoll/nicht schädlich sind.</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Einwilligung-Daten</h4>
-                    <div class="req-content">
-                        <!--ID: FA029-->
-
-<h2>Anforderung</h2>
-
-<p>Der Nutzer muss eine Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Vermutlich im Modal</li>
-<li>Speicherung der Einwilligung in der DB</li>
 </ul>
 
                     </div>
