@@ -5,3 +5,5 @@
 Dem Nutzer sollen relevante Termine und Fristen angezeigt werden.
 
 ## Anmerkungen
+
+- Plus verlinkung zu relevanten Informationen (z.B. Prüfungsanmeldung, Rückmeldung, etc.)

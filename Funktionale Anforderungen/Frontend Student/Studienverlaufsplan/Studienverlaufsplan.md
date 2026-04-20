@@ -6,5 +6,4 @@ Abhängig vom Student muss der richtige Studienverlaufsplan angezeigt werden.
 
 ## Anmerkungen
 
-
-Gibt es mehrere?
+- Abhängig vom Beginn des Studiums (da sich die Pläne teilweise ändern)
