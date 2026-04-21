@@ -8,4 +8,5 @@ Das Backend muss eine Schnittstelle zu den Datenbanken bereitstellen.
 
 - HISinOne
 - PostgreSQL
-- in Form von DAOs?
+- CRUD -> PostgreSQL
+- Only Read -> HISinOne
