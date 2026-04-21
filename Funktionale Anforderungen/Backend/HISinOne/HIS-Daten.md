@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Die bestehenden Daten im HISinOne-System sollen genutzt werden.
+Die bestehenden Daten im HISinOne-System müssen genutzt werden können.
 
 ## Anmerkungen
 
