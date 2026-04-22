@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Es soll eine Suchfunktion der Studenten angeboten werden.
+Es soll eine Suchfunktion der Studierenden angeboten werden.
 
 ## Anmerkungen
 

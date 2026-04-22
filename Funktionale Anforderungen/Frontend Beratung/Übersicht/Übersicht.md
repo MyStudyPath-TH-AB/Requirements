@@ -2,10 +2,10 @@
 
 ## Anforderung
 
-Es muss eine Übersicht der Studenten angezeigt werden können.
+Es muss eine Übersicht der Studierenden angezeigt werden können.
 
 ## Anmerkungen
 
-- Wenn man auf einen Studenten klickt, soll die Detailansicht des Studenten angezeigt werden.
-- Die Studentenliste soll farblich sortiert sein.
+- Wenn man auf einen Studierenden klickt, soll die Detailansicht des Studierenden angezeigt werden.
+- Die Studierendenliste soll farblich sortiert sein.
 - Nach dem login soll man hier landen.

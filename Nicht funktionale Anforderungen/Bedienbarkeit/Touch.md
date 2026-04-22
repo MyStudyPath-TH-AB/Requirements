@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Das Studenten Frontend muss mittels Touch bedienbar sein.
+Das Studierenden Frontend muss mittels Touch bedienbar sein.
 
 ## Anmerkungen
 

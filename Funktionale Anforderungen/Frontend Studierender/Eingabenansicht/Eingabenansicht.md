@@ -15,7 +15,7 @@ Der Nutzer muss die Möglichkeit haben, zusätzliche persönliche Informationen 
     - vorherige Studiengänge
     - Studienbeginn
     - Berufserfahrung
-    - Internationalität (Im Sinne von "Bin ich interntionaler Student oder nicht?")
+    - Internationalität (Im Sinne von "Bin ich interntionaler Studierender oder nicht?")
     - Studienmotivation
     - familiärer Hintergrund
     - Sonstige Informationen (Freitextfeld)
@@ -25,7 +25,7 @@ Der Nutzer muss die Möglichkeit haben, zusätzliche persönliche Informationen 
     - Lern/Leistungsmotivation
     - Abschlussnote Schule Hauptfächer (Englisch, Mathe, Deutsch)
     - Studienstatus (Erststudium, Zweitstudium, Studium nach Ausbildung etc.)
-    - Lebens/Wohnsituation (->Pendeln, Wohnen in Studentenwohnheim, Wohnen bei Eltern etc.)
+    - Lebens/Wohnsituation (->Pendeln, Wohnen in Studierendenwohnheim, Wohnen bei Eltern etc.)
     - Fällt es dir leicht das Studium zu finanzieren? (Ja/Nein)
 - Wird Datenfelder (nice to have):
     - Studienbezogene Interessen

@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Abhängig vom Student muss der richtige Studienverlaufsplan angezeigt werden.
+Abhängig vom Studierenden muss der richtige Studienverlaufsplan angezeigt werden.
 
 ## Anmerkungen
 

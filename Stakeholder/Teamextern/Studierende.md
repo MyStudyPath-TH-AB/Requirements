@@ -1,6 +1,6 @@
 ## Stakeholder
 
-Lernende (Studenten) der TH AB
+Lernende (Studierende) der TH AB
 
 ## Ziele
 

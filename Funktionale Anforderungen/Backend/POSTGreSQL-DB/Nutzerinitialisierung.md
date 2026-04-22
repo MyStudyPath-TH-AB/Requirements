@@ -2,8 +2,8 @@
 
 ## Anforderung
 
-Ein Student muss automatisch erstellt werden können.
+Ein Studierender muss automatisch erstellt werden können.
 
 ## Anmerkungen
 
-- Beim ersten anmelden des Studenten
+- Beim ersten anmelden des Studierenden
