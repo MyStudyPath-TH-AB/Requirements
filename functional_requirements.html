@@ -29,273 +29,141 @@
     <body>
         <div class="container">
             <h1>Funktionale Anforderungen</h1>
-    <div class="req-type"><h2>Allgemein</h2><h3>Internationalisierung</h3>
+    <div class="req-type"><h2>Backend</h2><h3>Validierung</h3>
                 <div class="req-item">
-                    <h4>Deutsch</h4>
+                    <h4>Eingabenvalidierung</h4>
                     <div class="req-content">
-                        <!--ID: FA019-->
+                        <!--ID: FA017-->
 
 <h2>Anforderung</h2>
 
-<p>Die Anwendung muss in deutscher Sprache verfügbar sein.</p>
+<p>Sollte es Freitexteingaben geben, müssen diese validiert werden.</p>
 
 <h2>Anmerkungen</h2>
 
-<p>vgl. <a href="./Englisch.md">englisch</a></p>
-
                     </div>
                 </div>
-                
+                <h3>Authentifizierung</h3>
                 <div class="req-item">
-                    <h4>Englisch</h4>
+                    <h4>Logout</h4>
                     <div class="req-content">
-                        <!--ID: FA020-->
+                        <!--ID: FA015-->
 
 <h2>Anforderung</h2>
 
-<p>Die Anwendung muss in englischer Sprache verfügbar sein.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>vgl. <a href="./Deutsch.md">deutsch</a></p>
-
-                    </div>
-                </div>
-                <h3>Zustimmung Datennutzung</h3>
-                <div class="req-item">
-                    <h4>Zustimmung-Datennutzung</h4>
-                    <div class="req-content">
-                        <!--ID: FA021-->
-
-<h2>Anforderung</h2>
-
-<p>Der Nutzer muss eine Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
+<p>Das System muss sich aus dem Hochschulsystem ausloggen können.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Muss bei erster Anmeldung erfolgen (bzw bis Zustimmung gegeben wurde).</li>
-<li>Zustimmung sollte jederzeit widerrufbar sein.</li>
-<li>(Eventuell redundante Anforderung)</li>
-<li>Zustimmung muss unterschiedlich für Studierende und Hochschulmitarbeitende sein</li>
-<li>Nutzungsbedingungen und Datenschutzrichtlinie</li>
-</ul>
-
-                    </div>
-                </div>
-                </div><div class="req-type"><h2>Frontend Ki-Assistent</h2><h3>Prompting</h3>
-                <div class="req-item">
-                    <h4>Problemerkennung</h4>
-                    <div class="req-content">
-                        <!--ID: FA036-->
-
-<h2>Anforderung</h2>
-
-<p>Die KI muss in der Lage sein, Problemerkennung durchzuführen.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Problemerkennung bezüglich des Lernverhaltens des Studierenden</li>
-<li>Erkennung von Schwachstellen im Lernprozess</li>
+<li>Es muss sichergestellt werden, dass die Session des Nutzers im Hochschulsystem auch wirklich geschlossen wird, damit keine unbefugten Zugriffe möglich sind.</li>
+<li>vgl. <a href="./../../Frontend/Willkommensseite/Logout.md">Logout Frontend</a></li>
 </ul>
 
                     </div>
                 </div>
                 
                 <div class="req-item">
-                    <h4>Lernmaterial</h4>
+                    <h4>Timeout</h4>
                     <div class="req-content">
-                        <!--ID: FA033-->
+                        <!--ID: FA016-->
 
 <h2>Anforderung</h2>
 
-<p>Die KI muss mit Lernmaterialien umgehen können.</p>
+<p>Bei zu langer Inaktivität soll der Nutzer automatisch ausgeloggt werden.</p>
 
 <h2>Anmerkungen</h2>
 
-<ul>
-<li>Lernmaterial woher?</li>
-</ul>
+<p>Auch relevant, wenn der Nutzer den Browser oder die Seite schließt, damit keine unbefugten Zugriffe möglich sind.</p>
 
                     </div>
                 </div>
                 
                 <div class="req-item">
-                    <h4>Lerntechniken</h4>
+                    <h4>Login</h4>
                     <div class="req-content">
-                        <!--ID: FA034-->
+                        <!--ID: FA037-->
 
 <h2>Anforderung</h2>
 
-<p>Die KI muss Lerntechniken empfehlen können.</p>
+<p>Die Authentifizierung im Single Sign On System der Hochschule muss funktionieren.</p>
 
 <h2>Anmerkungen</h2>
 
-<ul>
-<li>Welche Lerntechniken? </li>
-</ul>
+<p>vgl. <a href="./../../Frontend/Willkommensseite/Login.md">Login Frontend</a></p>
 
                     </div>
                 </div>
                 <h3>Schnittstellen</h3>
                 <div class="req-item">
-                    <h4>Schnittstellen</h4>
+                    <h4>Datenbankschnittstelle</h4>
                     <div class="req-content">
-                        <!--ID: FA029-->
+                        <!--ID: FA040-->
 
 <h2>Anforderung</h2>
 
-<p>Es muss Schnittstellen zum Backend geben.</p>
+<p>Das Backend muss eine Schnittstelle zu den Datenbanken bereitstellen.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Bisher undefiniert.</li>
-</ul>
-
-                    </div>
-                </div>
-                <h3>Sonstiges</h3>
-                <div class="req-item">
-                    <h4>Datenschutz</h4>
-                    <div class="req-content">
-                        <!--ID: FA035-->
-
-<h2>Anforderung</h2>
-
-<p>Der Nutzer muss nochmals die Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Spezifisch für die Verarbeitung durch die KI.</li>
-</ul>
-
-                    </div>
-                </div>
-                </div><div class="req-type"><h2>Frontend Beratung</h2><h3>Detailansicht</h3>
-                <div class="req-item">
-                    <h4>Detailansicht</h4>
-                    <div class="req-content">
-                        <!--ID: FA027-->
-
-<h2>Anforderung</h2>
-
-<p>Es muss eine Detailansicht eines bestimmten Studierenden angezeigt werden können.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Die Detailansicht soll alle relevanten Informationen über den Studierenden enthalten.</li>
-<li>Es soll möglich sein, Kommentare zu dem Studierenden hinzuzufügen.</li>
-<li>Es soll einen Zurück Button geben, um zur Übersicht zurückzukehren.</li>
-</ul>
-
-                    </div>
-                </div>
-                <h3>Übersicht</h3>
-                <div class="req-item">
-                    <h4>Suchfunktion</h4>
-                    <div class="req-content">
-                        <!--ID: FA030-->
-
-<h2>Anforderung</h2>
-
-<p>Es soll eine Suchfunktion der Studierenden angeboten werden.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Man soll nach Name, Matrikelnummer, Studiengang, Semester, etc. suchen können</li>
+<li>HISinOne</li>
+<li>PostgreSQL</li>
+<li>CRUD -> PostgreSQL</li>
+<li>Only Read -> HISinOne</li>
 </ul>
 
                     </div>
                 </div>
                 
                 <div class="req-item">
-                    <h4>Übersicht</h4>
+                    <h4>REST-Schnittstellen</h4>
                     <div class="req-content">
-                        <!--ID: FA026-->
+                        <!--ID: FA041-->
 
 <h2>Anforderung</h2>
 
-<p>Es muss eine Übersicht der Studierenden angezeigt werden können.</p>
+<p>Das Backend muss REST-Schnittstellen bereitstellen.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Wenn man auf einen Studierenden klickt, soll die Detailansicht des Studierenden angezeigt werden.</li>
-<li>Die Studierendenliste soll farblich sortiert sein.</li>
-<li>Nach dem login soll man hier landen.</li>
+<li>Fürs Frontend</li>
 </ul>
 
                     </div>
                 </div>
-                
+                <h3>Postgresql-Db</h3>
                 <div class="req-item">
-                    <h4>Filterfunktion</h4>
+                    <h4>Nutzerinitialisierung</h4>
                     <div class="req-content">
-                        <!--ID: FA031-->
+                        <!--ID: FA042-->
 
 <h2>Anforderung</h2>
 
-<p>Es soll eine Filterfunktion für die Studierendenübersicht angeboten werden.</p>
+<p>Ein Studierender muss automatisch erstellt werden können.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Man soll nach Studiengang, Semester, Fehlversuchen, Risikostatus etc. filtern können</li>
-<li>Eventuell auch zur Sortierung der Studierendenliste</li>
+<li>Beim ersten anmelden des Studierenden</li>
 </ul>
 
                     </div>
                 </div>
-                <h3>Willkommensseite</h3>
+                <h3>Hisinone</h3>
                 <div class="req-item">
-                    <h4>Logout Beratung</h4>
+                    <h4>HIS-Daten</h4>
                     <div class="req-content">
-                        <!--ID: FA025-->
+                        <!--ID: FA018-->
 
 <h2>Anforderung</h2>
 
-<p>Nutzer müssen sich ausloggen können.</p>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Willkommensseite</h4>
-                    <div class="req-content">
-                        <!--ID: FA028-->
-
-<h2>Anforderung</h2>
-
-<p>Es muss eine Willkommensseite geben.</p>
+<p>Die bestehenden Daten im HISinOne-System müssen genutzt werden können.</p>
 
 <h2>Anmerkungen</h2>
 
-<ul>
-<li>Login</li>
-<li>Logout</li>
-<li>Kann eventuell die Gleiche sein wie für die Studierenden</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Login Beratung</h4>
-                    <div class="req-content">
-                        <!--ID: FA024-->
-
-<h2>Anforderung</h2>
-
-<p>Nutzer müssen sich auf der Willkommensseite einloggen können.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>Authentifizierung mittels Hochschulaccount</p>
+<p>Im HISinOne System liegen Noten und auch irgendwann die Studiengangpläne.</p>
 
                     </div>
                 </div>
@@ -312,6 +180,24 @@
                     </div>
                 </div>
                 <h3>Eingabenansicht</h3>
+                <div class="req-item">
+                    <h4>Daten-Löschung</h4>
+                    <div class="req-content">
+                        <!--ID: FA023-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss die Möglichkeit haben, gespeicherte Daten zu löschen.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Es soll ein Modal zur Bestätigung angezeigt werden.</li>
+</ul>
+
+                    </div>
+                </div>
+                
                 <div class="req-item">
                     <h4>Eingabenansicht</h4>
                     <div class="req-content">
@@ -384,24 +270,6 @@
                 </div>
                 
                 <div class="req-item">
-                    <h4>Daten-Löschung</h4>
-                    <div class="req-content">
-                        <!--ID: FA023-->
-
-<h2>Anforderung</h2>
-
-<p>Der Nutzer muss die Möglichkeit haben, gespeicherte Daten zu löschen.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Es soll ein Modal zur Bestätigung angezeigt werden.</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
                     <h4>Validierung</h4>
                     <div class="req-content">
                         <!--ID: FA011-->
@@ -420,55 +288,22 @@
                 </div>
                 <h3>Studienverlaufsplan</h3>
                 <div class="req-item">
-                    <h4>Hinweis-Fehlende-Infos</h4>
+                    <h4>Empfehlungen</h4>
                     <div class="req-content">
-                        <!--ID: FA014-->
+                        <!--ID: FA012-->
 
 <h2>Anforderung</h2>
 
-<p>Es soll einen Hinweis für den Nutzer geben, falls Informationen unvollständig vorliegen.</p>
+<p>Dem Benutzer müssen studienbezogene Empfehlungen angezeigt werden.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Wird dies überhaupt benötigt?</li>
-<li>Eventuell auch in der Eingabenansicht.</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Termine-Fristen</h4>
-                    <div class="req-content">
-                        <!--ID: FA013-->
-
-<h2>Anforderung</h2>
-
-<p>Dem Nutzer sollen relevante Termine und Fristen angezeigt werden.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Plus verlinkung zu relevanten Informationen (z.B. Prüfungsanmeldung, Rückmeldung, etc.)</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Beratungsstellen</h4>
-                    <div class="req-content">
-                        <!--ID: FA022-->
-
-<h2>Anforderung</h2>
-
-<p>Dem Nutzer muss ein statischer Hinweis bezüglich den Beratungsstellen der Hochschule angezeigt werden.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Welche Beratungsstellen gibt es?</li>
+<li>Diese sollen strukturiert angezeigt werden.
+z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungsterminkollisionen, etc.</li>
+<li>Anzeige SPO + APO?</li>
+<li>Hinweis auf Grundlagen und Orientierungsfächer, bzw etwaigen ECTS Meilensteinen</li>
+<li>Hinweis zu Prüfungseinsichten (vor allem bei nicht bestandenen Prüfungen)</li>
 </ul>
 
                     </div>
@@ -493,22 +328,71 @@
                 </div>
                 
                 <div class="req-item">
-                    <h4>Empfehlungen</h4>
+                    <h4>Abweichende-Studienpläne</h4>
                     <div class="req-content">
-                        <!--ID: FA012-->
+                        <!--ID: FA008-->
 
 <h2>Anforderung</h2>
 
-<p>Dem Benutzer müssen studienbezogene Empfehlungen angezeigt werden.</p>
+<p>Abweichende Studienpläne sollen angezeigt werden können.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>Soll es eine Vergleichsansicht geben?</p>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Hinweis-Fehlende-Infos</h4>
+                    <div class="req-content">
+                        <!--ID: FA014-->
+
+<h2>Anforderung</h2>
+
+<p>Es soll einen Hinweis für den Nutzer geben, falls Informationen unvollständig vorliegen.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Diese sollen strukturiert angezeigt werden.
-z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungsterminkollisionen, etc.</li>
-<li>Anzeige SPO + APO?</li>
-<li>Hinweis auf Grundlagen und Orientierungsfächer, bzw etwaigen ECTS Meilensteinen</li>
-<li>Hinweis zu Prüfungseinsichten (vor allem bei nicht bestandenen Prüfungen)</li>
+<li>Wird dies überhaupt benötigt?</li>
+<li>Eventuell auch in der Eingabenansicht.</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Beratungsstellen</h4>
+                    <div class="req-content">
+                        <!--ID: FA022-->
+
+<h2>Anforderung</h2>
+
+<p>Dem Nutzer muss ein statischer Hinweis bezüglich den Beratungsstellen der Hochschule angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Welche Beratungsstellen gibt es?</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Termine-Fristen</h4>
+                    <div class="req-content">
+                        <!--ID: FA013-->
+
+<h2>Anforderung</h2>
+
+<p>Dem Nutzer sollen relevante Termine und Fristen angezeigt werden.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Plus verlinkung zu relevanten Informationen (z.B. Prüfungsanmeldung, Rückmeldung, etc.)</li>
 </ul>
 
                     </div>
@@ -534,38 +418,156 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
                     </div>
                 </div>
-                
+                </div><div class="req-type"><h2>Frontend Ki-Assistent</h2><h3>Prompting</h3>
                 <div class="req-item">
-                    <h4>Abweichende-Studienpläne</h4>
+                    <h4>Lerntechniken</h4>
                     <div class="req-content">
-                        <!--ID: FA008-->
+                        <!--ID: FA034-->
 
 <h2>Anforderung</h2>
 
-<p>Abweichende Studienpläne sollen angezeigt werden können.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>Soll es eine Vergleichsansicht geben?</p>
-
-                    </div>
-                </div>
-                <h3>Willkommensseite</h3>
-                <div class="req-item">
-                    <h4>Willkommensseite</h4>
-                    <div class="req-content">
-                        <!--ID: FA001-->
-
-<h2>Anforderung</h2>
-
-<p>Es muss eine Willkommensseite geben.</p>
+<p>Die KI muss Lerntechniken empfehlen können.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Login</li>
-<li>Logout</li>
+<li>Welche Lerntechniken? </li>
 </ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Lernmaterial</h4>
+                    <div class="req-content">
+                        <!--ID: FA033-->
+
+<h2>Anforderung</h2>
+
+<p>Die KI muss mit Lernmaterialien umgehen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Lernmaterial woher?</li>
+</ul>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Problemerkennung</h4>
+                    <div class="req-content">
+                        <!--ID: FA036-->
+
+<h2>Anforderung</h2>
+
+<p>Die KI muss in der Lage sein, Problemerkennung durchzuführen.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Problemerkennung bezüglich des Lernverhaltens des Studierenden</li>
+<li>Erkennung von Schwachstellen im Lernprozess</li>
+</ul>
+
+                    </div>
+                </div>
+                <h3>Sonstiges</h3>
+                <div class="req-item">
+                    <h4>Datenschutz</h4>
+                    <div class="req-content">
+                        <!--ID: FA035-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss nochmals die Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Spezifisch für die Verarbeitung durch die KI.</li>
+</ul>
+
+                    </div>
+                </div>
+                <h3>Schnittstellen</h3>
+                <div class="req-item">
+                    <h4>Schnittstellen</h4>
+                    <div class="req-content">
+                        <!--ID: FA029-->
+
+<h2>Anforderung</h2>
+
+<p>Es muss Schnittstellen zum Backend geben.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Bisher undefiniert.</li>
+</ul>
+
+                    </div>
+                </div>
+                </div><div class="req-type"><h2>Allgemein</h2><h3>Internationalisierung</h3>
+                <div class="req-item">
+                    <h4>Englisch</h4>
+                    <div class="req-content">
+                        <!--ID: FA020-->
+
+<h2>Anforderung</h2>
+
+<p>Die Anwendung muss in englischer Sprache verfügbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>vgl. <a href="./Deutsch.md">deutsch</a></p>
+
+                    </div>
+                </div>
+                
+                <div class="req-item">
+                    <h4>Deutsch</h4>
+                    <div class="req-content">
+                        <!--ID: FA019-->
+
+<h2>Anforderung</h2>
+
+<p>Die Anwendung muss in deutscher Sprache verfügbar sein.</p>
+
+<h2>Anmerkungen</h2>
+
+<p>vgl. <a href="./Englisch.md">englisch</a></p>
+
+                    </div>
+                </div>
+                <h3>Zustimmung Datennutzung</h3>
+                <div class="req-item">
+                    <h4>Zustimmung-Datennutzung</h4>
+                    <div class="req-content">
+                        <!--ID: FA021-->
+
+<h2>Anforderung</h2>
+
+<p>Der Nutzer muss eine Einwilligung in die Verarbeitung seiner personenbezogenen Daten geben können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Muss bei erster Anmeldung erfolgen (bzw bis Zustimmung gegeben wurde).</li>
+<li>Zustimmung sollte jederzeit widerrufbar sein.</li>
+<li>(Eventuell redundante Anforderung)</li>
+<li>Zustimmung muss unterschiedlich für Studierende und Hochschulmitarbeitende sein</li>
+<li>Nutzungsbedingungen und Datenschutzrichtlinie</li>
+</ul>
+
+                    </div>
+                </div>
+                </div><div class="req-type"><h2>Frontend Allgemein</h2><h3>Navigation</h3>
+                <div class="req-item">
+                    <h4>Navigation-SRM-Übersicht</h4>
+                    <div class="req-content">
+                        <p></p>
 
                     </div>
                 </div>
@@ -597,7 +599,7 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
                     </div>
                 </div>
-                
+                <h3>Login-Logout</h3>
                 <div class="req-item">
                     <h4>Logout Student</h4>
                     <div class="req-content">
@@ -611,159 +613,150 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
                 </div>
                 
                 <div class="req-item">
-                    <h4>Login Student</h4>
+                    <h4>Logout Beratung</h4>
                     <div class="req-content">
-                        <!--ID: FA005-->
+                        <!--ID: FA025-->
 
 <h2>Anforderung</h2>
 
-<p>Nutzer müssen sich auf der Willkommensseite einloggen können.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>Authentifizierung mittels Hochschulaccount</p>
+<p>Nutzer müssen sich ausloggen können.</p>
 
                     </div>
                 </div>
-                </div><div class="req-type"><h2>Backend</h2><h3>Postgresql-Db</h3>
+                <h3>Willkommensseite</h3>
                 <div class="req-item">
-                    <h4>Nutzerinitialisierung</h4>
+                    <h4>Willkommensseite</h4>
                     <div class="req-content">
-                        <!--ID: FA042-->
+                        <!--ID: FA028-->
 
 <h2>Anforderung</h2>
 
-<p>Ein Studierender muss automatisch erstellt werden können.</p>
+<p>Es muss eine Willkommensseite geben.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Beim ersten anmelden des Studierenden</li>
+<li>Login</li>
+<li>Logout</li>
+<li>Kann eventuell die Gleiche sein wie für die Studierenden</li>
 </ul>
 
                     </div>
                 </div>
-                <h3>Authentifizierung</h3>
+                </div><div class="req-type"><h2>Frontend Beratung</h2><h3>Mock Student Ansicht</h3>
                 <div class="req-item">
-                    <h4>Timeout</h4>
+                    <h4>Mock-Student-Ansicht</h4>
                     <div class="req-content">
-                        <!--ID: FA016-->
+                        <!--ID: FA044-->
 
 <h2>Anforderung</h2>
 
-<p>Bei zu langer Inaktivität soll der Nutzer automatisch ausgeloggt werden.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>Auch relevant, wenn der Nutzer den Browser oder die Seite schließt, damit keine unbefugten Zugriffe möglich sind.</p>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>Logout</h4>
-                    <div class="req-content">
-                        <!--ID: FA015-->
-
-<h2>Anforderung</h2>
-
-<p>Das System muss sich aus dem Hochschulsystem ausloggen können.</p>
+<p>Mitarbeiter/Beratende sollen die Möglichkeit haben, eine Mock Studenten Ansicht zu aktivieren.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Es muss sichergestellt werden, dass die Session des Nutzers im Hochschulsystem auch wirklich geschlossen wird, damit keine unbefugten Zugriffe möglich sind.</li>
-<li>vgl. <a href="./../../Frontend/Willkommensseite/Logout.md">Logout Frontend</a></li>
+<li>Konzept???</li>
 </ul>
 
                     </div>
                 </div>
-                
+                <h3>Übersicht</h3>
                 <div class="req-item">
-                    <h4>Login</h4>
+                    <h4>Übersicht</h4>
                     <div class="req-content">
-                        <!--ID: FA037-->
+                        <!--ID: FA026-->
 
 <h2>Anforderung</h2>
 
-<p>Die Authentifizierung im Single Sign On System der Hochschule muss funktionieren.</p>
-
-<h2>Anmerkungen</h2>
-
-<p>vgl. <a href="./../../Frontend/Willkommensseite/Login.md">Login Frontend</a></p>
-
-                    </div>
-                </div>
-                <h3>Schnittstellen</h3>
-                <div class="req-item">
-                    <h4>REST-Schnittstellen</h4>
-                    <div class="req-content">
-                        <!--ID: FA041-->
-
-<h2>Anforderung</h2>
-
-<p>Das Backend muss REST-Schnittstellen bereitstellen.</p>
+<p>Es muss eine Übersicht der Studierenden angezeigt werden können.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Fürs Frontend</li>
+<li>Wenn man auf einen Studierenden klickt, soll die Detailansicht des Studierenden angezeigt werden.</li>
+<li>Die Studierendenliste soll farblich sortiert sein.</li>
+<li>Nach dem login soll man hier landen.</li>
 </ul>
 
                     </div>
                 </div>
                 
                 <div class="req-item">
-                    <h4>Datenbankschnittstelle</h4>
+                    <h4>Filterfunktion</h4>
                     <div class="req-content">
-                        <!--ID: FA040-->
+                        <!--ID: FA031-->
 
 <h2>Anforderung</h2>
 
-<p>Das Backend muss eine Schnittstelle zu den Datenbanken bereitstellen.</p>
+<p>Es soll eine Filterfunktion für die Studierendenübersicht angeboten werden.</p>
 
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>HISinOne</li>
-<li>PostgreSQL</li>
-<li>CRUD -> PostgreSQL</li>
-<li>Only Read -> HISinOne</li>
+<li>Man soll nach Studiengang, Semester, Fehlversuchen, Risikostatus etc. filtern können</li>
+<li>Eventuell auch zur Sortierung der Studierendenliste</li>
 </ul>
 
                     </div>
                 </div>
-                <h3>Hisinone</h3>
+                
                 <div class="req-item">
-                    <h4>HIS-Daten</h4>
+                    <h4>Suchfunktion</h4>
                     <div class="req-content">
-                        <!--ID: FA018-->
+                        <!--ID: FA030-->
 
 <h2>Anforderung</h2>
 
-<p>Die bestehenden Daten im HISinOne-System müssen genutzt werden können.</p>
+<p>Es soll eine Suchfunktion der Studierenden angeboten werden.</p>
 
 <h2>Anmerkungen</h2>
 
-<p>Im HISinOne System liegen Noten und auch irgendwann die Studiengangpläne.</p>
+<ul>
+<li>Man soll nach Name, Matrikelnummer, Studiengang, Semester, etc. suchen können</li>
+</ul>
 
                     </div>
                 </div>
-                <h3>Validierung</h3>
+                <h3>Detailansicht</h3>
                 <div class="req-item">
-                    <h4>Eingabenvalidierung</h4>
+                    <h4>Detailansicht</h4>
                     <div class="req-content">
-                        <!--ID: FA017-->
+                        <!--ID: FA027-->
 
 <h2>Anforderung</h2>
 
-<p>Sollte es Freitexteingaben geben, müssen diese validiert werden.</p>
+<p>Es muss eine Detailansicht eines bestimmten Studierenden angezeigt werden können.</p>
 
 <h2>Anmerkungen</h2>
+
+<ul>
+<li>Die Detailansicht soll alle relevanten Informationen über den Studierenden enthalten.</li>
+<li>Es soll möglich sein, Kommentare zu dem Studierenden hinzuzufügen.</li>
+<li>Es soll einen Zurück Button geben, um zur Übersicht zurückzukehren.</li>
+</ul>
 
                     </div>
                 </div>
                 </div><div class="req-type"><h2>Server</h2><h3>Servertypen</h3>
+                <div class="req-item">
+                    <h4>PostgreSQL</h4>
+                    <div class="req-content">
+                        <!--ID: FA038-->
+
+<h2>Anforderung</h2>
+
+<p>Das System muss auf die Daten in einer PostgreSQL-Datenbank zugreifen können.</p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Hier liegen die freiwillig gegebenen Daten der Studierenden</li>
+</ul>
+
+                    </div>
+                </div>
+                
                 <div class="req-item">
                     <h4>HISinOne</h4>
                     <div class="req-content">
@@ -778,24 +771,6 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 <ul>
 <li>Hier liegen Studierendendaten, Prüfungsdaten, etc.</li>
 <li>Studienverlaufspläne gibt es noch nicht, sollen aber kommen.</li>
-</ul>
-
-                    </div>
-                </div>
-                
-                <div class="req-item">
-                    <h4>PostgreSQL</h4>
-                    <div class="req-content">
-                        <!--ID: FA038-->
-
-<h2>Anforderung</h2>
-
-<p>Das System muss auf die Daten in einer PostgreSQL-Datenbank zugreifen können.</p>
-
-<h2>Anmerkungen</h2>
-
-<ul>
-<li>Hier liegen die freiwillig gegebenen Daten der Studierenden</li>
 </ul>
 
                     </div>
