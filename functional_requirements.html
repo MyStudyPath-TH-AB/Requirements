@@ -58,6 +58,7 @@
 <ul>
 <li>Es muss sichergestellt werden, dass die Session des Nutzers im Hochschulsystem auch wirklich geschlossen wird, damit keine unbefugten Zugriffe möglich sind.</li>
 <li>vgl. <a href="./../../Frontend/Willkommensseite/Logout.md">Logout Frontend</a></li>
+<li>Eventuell nicht benötigt?</li>
 </ul>
 
                     </div>
@@ -74,7 +75,10 @@
 
 <h2>Anmerkungen</h2>
 
-<p>Auch relevant, wenn der Nutzer den Browser oder die Seite schließt, damit keine unbefugten Zugriffe möglich sind.</p>
+<ul>
+<li>Auch relevant, wenn der Nutzer den Browser oder die Seite schließt, damit keine unbefugten Zugriffe möglich sind.</li>
+<li>Eventuell nicht benötigt? (Abnahme durch Shibboleth?)</li>
+</ul>
 
                     </div>
                 </div>
@@ -111,6 +115,7 @@
 <li>PostgreSQL</li>
 <li>CRUD -> PostgreSQL</li>
 <li>Only Read -> HISinOne</li>
+<li>(Eventuell Moodle)</li>
 </ul>
 
                     </div>
@@ -276,7 +281,7 @@
 
 <h2>Anforderung</h2>
 
-<p>Eingaben des Nutzers müssen validiert werden.</p>
+<p>Das System muss Eingaben des Nutzers validieren.</p>
 
 <h2>Anmerkungen</h2>
 
@@ -350,7 +355,7 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <h2>Anforderung</h2>
 
-<p>Es soll einen Hinweis für den Nutzer geben, falls Informationen unvollständig vorliegen.</p>
+<p>Dem Benutzer sollen Hinweise gegeben werden, falls Informationen unvollständig vorliegen.</p>
 
 <h2>Anmerkungen</h2>
 
@@ -567,7 +572,17 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
                 <div class="req-item">
                     <h4>Navigation-SRM-Übersicht</h4>
                     <div class="req-content">
-                        <p></p>
+                        <!--ID: FA043-->
+
+<h2>Anforderung</h2>
+
+<p>Angestellte/Beratende müssen in der Lage sein, die SRM Übersicht zu erreichen. </p>
+
+<h2>Anmerkungen</h2>
+
+<ul>
+<li>Eventuell via Redirect von der Willkommensseite/Loadingspinner aus (nach erfolgreichem login)</li>
+</ul>
 
                     </div>
                 </div>
@@ -579,9 +594,14 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <h2>Anforderung</h2>
 
-<p>Die Informationseingaben Ansicht muss von der Willkommensseite aus erreichbar sein.</p>
+<p>Studierende müssen die Informationseingaben Ansicht erreichen können.</p>
 
 <h2>Anmerkungen</h2>
+
+<ul>
+<li>Navigation von Willkommensseite</li>
+<li>Navigation von Studienplanseite (?)</li>
+</ul>
 
                     </div>
                 </div>
@@ -593,9 +613,14 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <h2>Anforderung</h2>
 
-<p>Die Studienplan Ansicht muss von der Willkommensseite aus erreichbar sein.</p>
+<p>Studierende müssen die Studienplan Ansicht erreichen können.</p>
 
 <h2>Anmerkungen</h2>
+
+<ul>
+<li>Navigation von Willkommensseite</li>
+<li>Navigation von Informationseingabe ((?))</li>
+</ul>
 
                     </div>
                 </div>
@@ -619,7 +644,7 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 
 <h2>Anforderung</h2>
 
-<p>Nutzer müssen sich ausloggen können.</p>
+<p>Nutzer sollen sich ausloggen können.</p>
 
                     </div>
                 </div>
@@ -636,9 +661,7 @@ z.B. Empfehlungen hinsichtlich Schwerpunktewahl, Wahl der Wahlfächer, Prüfungs
 <h2>Anmerkungen</h2>
 
 <ul>
-<li>Login</li>
-<li>Logout</li>
-<li>Kann eventuell die Gleiche sein wie für die Studierenden</li>
+<li>Eventuell mit Loadingspinner (während Login)</li>
 </ul>
 
                     </div>
