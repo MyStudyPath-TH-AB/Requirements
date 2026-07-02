@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Nutzer müssen sich ausloggen können.
+Nutzer sollen sich ausloggen können.
 
 
 

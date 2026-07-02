@@ -2,7 +2,9 @@
 
 ## Anforderung
 
-Die Informationseingaben Ansicht muss von der Willkommensseite aus erreichbar sein.
+Studierende müssen die Informationseingaben Ansicht erreichen können.
 
 ## Anmerkungen
 
+- Navigation von Willkommensseite
+- Navigation von Studienplanseite (?)

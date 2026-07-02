@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Es soll einen Hinweis für den Nutzer geben, falls Informationen unvollständig vorliegen.
+Dem Benutzer sollen Hinweise gegeben werden, falls Informationen unvollständig vorliegen.
 
 ## Anmerkungen
 

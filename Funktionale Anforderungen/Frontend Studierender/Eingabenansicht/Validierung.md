@@ -2,7 +2,7 @@
 
 ## Anforderung
 
-Eingaben des Nutzers müssen validiert werden.
+Das System muss Eingaben des Nutzers validieren.
 
 ## Anmerkungen
 

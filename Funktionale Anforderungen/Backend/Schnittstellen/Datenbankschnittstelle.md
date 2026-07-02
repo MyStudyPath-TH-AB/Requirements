@@ -10,3 +10,4 @@ Das Backend muss eine Schnittstelle zu den Datenbanken bereitstellen.
 - PostgreSQL
 - CRUD -> PostgreSQL
 - Only Read -> HISinOne
+- (Eventuell Moodle)
